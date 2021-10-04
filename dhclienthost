@@ -1,0 +1,16 @@
+#!/bin/bash -x
+
+ip netns exec h0 dhclient
+ip netns exec h1 dhclient
+ip netns exec h2 dhclient
+ip netns exec h3 dhclient
+ip netns exec h4 dhclient
+ip netns exec h5 dhclient
+ip netns exec h6 dhclient
+ip netns exec h7 dhclient
+ip netns exec h8 dhclient
+ip netns exec h9 dhclient
+ip netns exec h10 dhclient
+
+
+

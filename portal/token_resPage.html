@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+ <title trspan="authPortal">Authentication portal</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta http-equiv="Content-Script-Type" content="text/javascript" />
+ <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+ <meta http-equiv="Pragma" content="no-cache" />
+ <meta http-equiv="Expires" content="0" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <link rel="stylesheet" type="text/css" href="/static/bwr/bootstrap/dist/css/bootstrap.min.css" />
+ <link rel="stylesheet" type="text/css" href="/static/bwr/font-awesome/css/font-awesome.min.css" />
+ <link rel="stylesheet" type="text/css" href="/static/unilim/css/styles.css" />
+ <link rel="stylesheet" type="text/css" href="/portal.css" />
+ 
+ <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+ <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+ <!--[if lt IE 9]>
+   <script type="text/javascript" src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+   <script type="text/javascript" src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+ <![endif]-->
+ <link href="/static/unilim/favicon.png" rel="icon" type="image/vnd.microsoft.icon" sizes="16x16 32x32 48x48 64x64 128x128" />
+ <link href="/static/unilim/favicon.png" rel="shortcut icon" type="image/vnd.microsoft.icon" sizes="16x16 32x32 48x48 64x64 128x128" />
+ 
+  <!-- Load javascript common to all skins -->
+  <script type="text/javascript" src="/static/bwr/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/static/bwr/jquery-ui/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/static/bwr/jquery.cookie/jquery.cookie.min.js"></script>
+ <script type="application/init">
+ {
+ "displaytab":"",
+ "choicetab":"",
+ "login":"",
+ "newwindow":0,
+ "appslistorder":"",
+ "scriptname":"",
+ "activeTimer":0,
+ "pingInterval":0,
+ "trOver":{"en":{"PE0":"Login or password issue","PE4":"Get Unilim account","anotherInformation":"Need help ?"},"all":{},"fr":{"anotherInformation":"Besoin d'aide ?","PE4":"Obtenir un compte Unilim","PE0":"ProblÃ¨me d'identifiant ou de mot de passe"}}
+ }
+ </script>
+
+
+  <script type="text/javascript" src="/static/unilim/js/skin.min.js"></script>
+  <script type="text/javascript" src="/static/common/js/portal.min.js"></script>
+  <script type="text/javascript" src="/static/bwr/bootstrap/dist/js/bootstrap.min.js"></script>
+ 
+ <!-- Custom <head> markups, like CSS, js, etc. -->    
+<!-- <link rel="stylesheet" href="/static/unilim/css/bootstrap.min.css" rel="stylesheet"> -->
+<!-- <link rel="stylesheet" href="/static/unilim/css/font-awesome.min.css"> -->
+<link rel="stylesheet" type="text/css" href="/static/unilim/icons/style.css" />
+<link rel="stylesheet" type="text/css" href="/static/unilim/css/material-dashboard.css" />
+<link rel="stylesheet" type="text/css" href="/static/unilim/css/custom.css" />
+
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">    <!-- Custom HTML header -->
+<!--  -->
+<nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse justify-content-end">
+      <ul class="navbar-nav ul-top-menu">
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link" href="#" id="message">
+            <i class="material-icons">notifications</i>
+          </a>
+        </li> -->
+        <li>
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="darkSwitch" />
+            <label class="custom-control-label" for="darkSwitch"> <i class="fa fa-adjust"></i></label>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+</div>
+
+
+
+<main id="logincontent" class="container">
+
+      <!-- Custom HTML Login header -->
+
+
+<!-- <div class="alert alert-danger">
+	Development in progress...
+</div> -->
+
+<div class="row justify-content-center mt-5 mb-4" >
+    <div class="col-6 col-sm-5 col-md-4 col-lg-3">
+        <div class="ul-element-logo-ul" >
+            <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 425 137">
+            <g class="bg-primary">
+                <path d="M137.133,103.88 L137.133,42.368 C134.663,52.118 130.281,63.316 123.039,75.98 C116.885,86.74 109.252,97.078 100.43,105.993 C111.869,113.379 125.37,110.216 137.133,103.88"></path>
+                <path d="M92.926,95.72 C97.547,91.569 100.418,88.326 103.663,84.423 C120.354,64.387 141.198,29.537 136.487,8.151 C132.65,-9.281 115.97,7.337 108.587,16.644 C98.901,28.835 92.19,43.438 89.306,58.776 C86.944,71.348 87.19,84.641 92.926,95.72"></path>
+                <path d="M18.991,57.6 C18.782,57.876 20.499,63.52 21.551,66.193 C22.605,68.863 23.454,70.091 22.973,70.965 C17.687,80.453 11.202,97.326 13.804,107.065 C14.735,110.582 18.899,112.202 22.912,110.207 C46.239,98.622 54.296,58.879 54.985,56.336 C55.632,58.55 55.833,60.358 56.956,62.966 C58.078,65.582 59.456,67.756 58.96,69.71 C57.641,74.957 56.328,80.361 54.721,85.679 C53.575,90.867 52.332,97.646 53.509,101.423 C58.591,117.844 77.699,109.036 90.082,98.372 C85.156,84.269 82.662,69.754 83.883,54.53 C85.442,35.253 93.366,14.54 107.118,0.231 L8.941,0.231 C4.182,0.231 0.322,4.086 0.322,8.843 L0.322,77.102 C7.095,71.146 13.529,64.842 18.991,57.6"></path>
+                <path d="M95.642,110.527 C94.127,111.877 92.569,113.181 90.955,114.427 C76.925,125.358 62.283,128.355 54.436,109.501 C52.73,105.413 51.586,101.431 50.871,97.506 C50.796,97.272 50.73,97.043 50.656,96.817 C48.195,102.354 44.689,107.197 40.799,112 C37.508,116.065 30.782,123.652 25.072,124.236 C19.114,124.851 16.475,118.985 14.561,114.209 C12.425,108.905 9.645,101.419 9.705,95.619 C9.751,91.533 11.848,80.959 12.893,77.135 C9.622,81.49 4.74,87.602 0.323,92.017 L0.323,128.421 C0.323,133.181 4.182,137.04 8.942,137.04 L128.517,137.04 C133.279,137.04 137.134,133.181 137.134,128.421 L137.134,119.04 C121.708,125.624 105.208,124.873 95.642,110.527"></path>
+            </g>
+            <g class="bg-gray" transform="translate(158.000000, 26.000000)">
+                <path d="M22.992,1.019 L29.879,1.019 L29.897,23.592 C29.901,34.132 23.408,37.579 16.066,37.584 C8.721,37.584 2.236,34.145 2.236,23.607 L2.214,1.035 L9.107,1.026 L9.12,23.9 C9.12,29.743 11.412,31.791 16.066,31.789 C20.713,31.788 23.001,29.743 23.001,23.898 L22.992,1.019 L22.992,1.019 Z"></path>
+                <path d="M39.786,37.071 L39.775,11.1 L45.469,11.098 L45.469,13.895 C47.765,12.303 50.41,10.593 53.464,10.593 C58.655,10.588 61.156,13.988 61.161,19.279 L61.174,37.063 L54.975,37.065 L54.962,20.182 C54.959,16.686 53.859,15.592 51.763,15.592 C49.069,15.594 47.023,17.14 45.974,18.343 L45.983,37.071 L39.786,37.071 L39.786,37.071 Z"></path>
+                <path d="M70.693,6.288 L70.689,0.494 L76.881,0.494 L76.888,6.287 L70.693,6.288 L70.693,6.288 Z M76.901,37.059 L70.707,37.059 L70.696,11.083 L76.888,11.078 L76.901,37.059 L76.901,37.059 Z"></path>
+                <path d="M83.729,11.077 L89.92,11.075 L94.228,28.656 L94.321,28.656 L98.717,11.075 L104.905,11.063 L97.48,37.041 L90.984,37.051 L83.729,11.077 Z"></path>
+                <path d="M115.298,25.047 C115.402,30.446 117.809,32.537 120.698,32.535 C123.595,32.535 124.943,31.239 126.493,29.435 L130.985,32.23 C128.588,35.926 125.092,37.531 120.096,37.533 C113.361,37.535 109.109,32.293 109.106,24.055 C109.104,15.812 113.347,10.565 120.388,10.558 C127.175,10.507 130.98,16.254 130.985,22.487 L130.985,25.038 L115.298,25.047 Z M125.293,20.847 C125.185,17.249 123.281,15.156 120.289,15.156 C117.289,15.157 115.394,17.256 115.291,20.849 L125.293,20.847 L125.293,20.847 Z"></path>
+                <path d="M138.181,37.02 L138.168,11.052 L143.858,11.052 L143.858,15.49 L143.959,15.49 C145.461,12.395 147.56,10.651 151.254,10.55 L151.254,17.085 C150.953,17.044 150.603,17.044 150.154,17.044 C147.056,17.048 144.367,20.585 144.367,21.236 L144.376,37.019 L138.181,37.02 L138.181,37.02 Z"></path>
+                <path d="M170.336,17.876 C169.091,16.533 167.436,15.138 165.486,15.138 C163.089,15.138 161.996,16.14 161.996,17.688 C161.996,22.128 174.978,20.226 174.987,29.713 C174.987,35.108 170.89,37.506 165.449,37.51 C161.306,37.514 157.908,35.665 155.607,32.269 L159.752,29.169 C161.201,31.169 163.146,32.912 165.798,32.912 C167.997,32.912 169.49,31.712 169.49,29.963 C169.486,25.524 156.508,27.124 156.503,18.087 C156.503,13.241 160.593,10.545 165.087,10.541 C168.535,10.538 171.976,11.837 174.236,14.479 L170.336,17.876 L170.336,17.876 Z"></path>
+                <path d="M183.014,6.237 L183.014,0.438 L189.2,0.438 L189.209,6.237 L183.014,6.237 L183.014,6.237 Z M189.222,37.006 L183.032,37.006 L183.014,11.031 L189.213,11.029 L189.222,37.006 L189.222,37.006 Z"></path>
+                <path d="M199.755,11.02 L199.739,2.431 L205.931,2.429 L205.936,11.02 L211.036,11.02 L211.041,16.011 L205.94,16.011 L205.949,30.702 C205.949,32.099 206.652,32.495 208.195,32.495 C209.15,32.495 210.147,32.197 211.041,31.991 L211.047,37.087 C209.348,37.284 207.849,37.489 206.156,37.489 C201.563,37.491 199.757,35.197 199.755,31.498 L199.755,16.02 L196.156,16.02 L196.15,11.029 L199.755,11.02 L199.755,11.02 Z"></path>
+                <path d="M222.076,24.996 C222.181,30.386 224.579,32.488 227.481,32.488 C230.365,32.486 231.722,31.185 233.269,29.387 L237.763,32.179 C235.362,35.877 231.875,37.477 226.879,37.484 C220.139,37.484 215.889,32.244 215.878,24.005 C215.869,15.759 220.126,10.513 227.164,10.508 C233.956,10.454 237.759,16.199 237.763,22.436 L237.763,24.983 L222.076,24.996 L222.076,24.996 Z M232.064,20.797 C231.967,17.197 230.067,15.103 227.068,15.103 C224.078,15.103 222.171,17.207 222.076,20.807 L232.064,20.797 L232.064,20.797 Z M235.505,0.415 L228.21,7.716 L223.117,7.718 L227.814,0.421 L235.505,0.415 L235.505,0.415 Z"></path>
+                <path d="M22.625,81.442 L17.387,81.447 L17.082,78.65 C14.885,80.797 12.843,81.95 10.046,81.952 C3.151,81.952 -0.346,75.862 -0.355,67.77 C-0.355,61.377 3.342,54.985 10.033,54.976 C12.132,54.976 15.076,56.227 16.323,57.873 L16.431,57.873 L16.427,45.387 L22.617,45.387 L22.625,81.442 L22.625,81.442 Z M16.431,62.166 C15.181,61.02 13.627,59.978 11.632,59.978 C7.939,59.978 5.84,62.976 5.84,68.464 C5.842,73.966 7.947,76.956 11.64,76.951 C14.292,76.951 15.137,75.654 16.43,74.659 L16.43,62.166 L16.431,62.166 Z"></path>
+                <path d="M35.709,69.452 C35.812,74.848 38.211,76.947 41.105,76.947 C43.999,76.942 45.351,75.642 46.896,73.838 L51.392,76.635 C49.004,80.334 45.509,81.937 40.512,81.937 C33.768,81.944 29.518,76.7 29.514,68.46 C29.514,60.215 33.757,54.963 40.798,54.959 C47.59,54.91 51.388,60.655 51.392,66.897 L51.392,69.449 L35.709,69.452 L35.709,69.452 Z M45.703,65.25 C45.602,61.65 43.701,59.558 40.698,59.558 C37.703,59.558 35.807,61.66 35.71,65.259 L45.703,65.25 L45.703,65.25 Z"></path>
+                <path d="M75.29,81.419 L75.269,45.356 L82.159,45.356 L82.175,75.621 L97.864,75.616 L97.864,81.412 L75.29,81.419 Z"></path>
+                <path d="M105.489,50.639 L105.486,44.843 L111.679,44.843 L111.679,50.632 L105.489,50.639 L105.489,50.639 Z M111.701,81.396 L105.504,81.412 L105.489,55.433 L111.688,55.433 L111.701,81.396 L111.701,81.396 Z"></path>
+                <path d="M121.233,81.39 L121.224,55.42 L126.87,55.42 L126.87,58.221 C129.215,56.07 131.111,54.919 134.663,54.919 C137.352,54.919 139.899,56.215 141.056,58.713 C143.203,56.562 145.702,54.91 149.992,54.91 C152.687,54.91 156.388,56.507 156.388,62.701 L156.393,81.377 L150.206,81.377 L150.195,63.253 C150.195,61.158 149.349,60.004 147.099,59.905 C145.495,59.905 143.347,61.358 141.903,62.706 L141.914,81.381 L135.72,81.386 L135.715,63.259 C135.715,61.163 134.861,60.008 132.615,59.911 C131.016,59.911 128.863,61.362 127.423,62.708 L127.428,81.386 L121.233,81.39 L121.233,81.39 Z"></path>
+                <path d="M174.618,54.897 C181.656,54.895 185.902,60.139 185.906,68.376 C185.92,76.619 181.674,81.861 174.623,81.863 C167.589,81.868 163.339,76.625 163.335,68.384 C163.335,60.148 167.571,54.901 174.618,54.897 M174.618,59.89 C171.177,59.894 169.525,62.59 169.525,68.385 C169.525,74.177 171.18,76.877 174.623,76.877 C178.074,76.872 179.718,74.172 179.714,68.381 C179.714,62.588 178.061,59.89 174.618,59.89"></path>
+                <path d="M213.972,59.068 C212.523,59.068 210.929,59.068 209.972,59.678 C210.776,60.774 211.376,62.275 211.376,64.266 C211.381,69.168 208.088,72.662 201.59,72.662 C198.899,72.662 196.751,72.766 196.751,74.268 C196.751,78.47 213.831,72.76 213.835,83.146 C213.835,86.845 210.095,90.845 201.803,90.845 C194.813,90.847 190.209,88.752 190.209,84.656 C190.209,81.416 192.655,79.862 194.907,79.862 L194.907,79.755 C193.713,79.013 191.054,78.365 191.054,75.568 C191.054,73.07 193.948,71.172 195.1,70.822 C192.953,69.074 191.251,67.081 191.247,63.928 C191.247,59.384 194.739,54.888 201.483,54.881 C203.678,54.881 206.278,55.779 207.876,57.18 C209.075,55.581 211.024,54.781 213.968,54.881 L213.972,59.068 L213.972,59.068 Z M195.904,83.855 C195.908,85.85 197.603,86.752 202.8,86.751 C206.795,86.751 208.141,84.749 208.141,83.849 C208.141,82.651 206.297,80.855 200.304,80.855 C196.9,80.861 195.904,82.756 195.904,83.855 L195.904,83.855 Z M201.437,59.479 C198.79,59.479 196.936,61.382 196.941,63.78 C196.941,66.177 198.794,68.07 201.443,68.07 C203.79,68.07 205.687,66.171 205.678,63.78 C205.678,61.373 203.785,59.477 201.437,59.479 L201.437,59.479 Z"></path>
+                <path d="M224.465,69.36 C224.57,74.752 226.963,76.847 229.863,76.845 C232.762,76.845 234.11,75.545 235.658,73.75 L240.152,76.542 C237.759,80.239 234.259,81.837 229.267,81.837 C222.524,81.846 218.278,76.606 218.271,68.36 C218.265,60.121 222.506,54.87 229.548,54.87 C236.349,54.817 240.143,60.56 240.152,66.804 L240.152,69.351 L224.465,69.36 L224.465,69.36 Z M234.442,65.158 C234.352,61.557 232.451,59.468 229.457,59.468 C226.458,59.468 224.561,61.567 224.465,65.162 L234.442,65.158 L234.442,65.158 Z"></path>
+                <path d="M260.375,62.199 C259.128,60.846 257.473,59.45 255.53,59.452 C253.134,59.452 252.033,60.458 252.033,62.006 C252.037,66.444 265.02,64.544 265.02,74.038 C265.02,79.428 260.928,81.825 255.488,81.829 C251.34,81.834 247.941,79.98 245.644,76.594 L249.791,73.491 C251.244,75.493 253.178,77.236 255.839,77.236 C258.032,77.232 259.527,76.033 259.523,74.286 C259.523,69.843 246.54,71.445 246.536,62.403 C246.531,57.557 250.628,54.866 255.129,54.86 C258.57,54.86 262.022,56.155 264.263,58.8 L260.375,62.199 L260.375,62.199 Z"></path>
+            </g>
+            </svg>
+        </div>
+    </div> 
+</div>
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-12 col-md-10 col-lg-7">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title text-center">
+              <div id="errormsg-1">
+                
+                  <div class="warning">
+                    <span trmsg="9"></span>
+                    
+                  </div>
+                
+              </div>
+            </h4>
+            <p class="card-category"></p>
+          </div> <!--card-header-->
+          
+          <div class="card-body">
+
+  
+
+              
+
+              
+              <div class="">
+              
+                <form id="lform" action="#" method="post" class="login" role="form">
+              
+                <!-- Hidden fields -->
+                
+                <input type="hidden" name="url" value="" />
+                <input type="hidden" name="timezone" />
+                <input type="hidden" name="skin" value="unilim" />
+                
+      
+
+<input id="token" type="hidden" name="token" value="1610274373_30400" />
+
+
+
+<div class="form">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fa fa-user"></i> </span>
+      <label class="bmd-label-floating"> <span trspan="login"></span></label>
+    </div>
+    
+      <input id="ul-focus" name="user" type="text" class="form-control" autocomplete="off" value="" required aria-required="true" autofocus/>
+    
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fa fa-lock"></i></span>
+      <label class="bmd-label-floating"> <span trspan="password"></span></label>
+    </div>
+    
+      <input name="password" type="password" class="form-control key" autocomplete="off" required aria-required="true" aria-hidden="true"/>
+    
+  </div>
+
+  
+
+  
+
+    <div class="text-left">
+      
+    
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <div class="input-group-text">
+          <input type="checkbox" id="checkLogins" name="checkLogins" aria-describedby="checkLoginsLabel"  />
+        </div>
+      </div>
+      <p class="form-control">
+        <label id="checkLoginsLabel" for="checkLogins" trspan="checkLastLogins">Check my last logins</label>
+      </p>
+    </div>
+    
+    
+
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary" >
+        <span class="fa fa-sign-in"></span>
+        <span trspan="connect">Connect</span>
+      </button>
+    </div>
+
+    
+    
+
+  
+
+  
+  
+</div>
+
+<div class="actions">
+  
+ 
+  
+
+  
+</div>
+
+
+
+
+                </form>
+              </div>
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+                  <!-- Custom HTML Login Footer -->
+
+    <p class="text-center mt-2">
+      <a target="_blank" href="https://ent.unilim.fr/uPortal/render.userLayoutRootNode.uP?uP_fname=identifiantsUnilim"><span trspan="PE0"></span></a> - 
+      <a target="_blank" href="https://ent.unilim.fr/uPortal/render.userLayoutRootNode.uP?uP_fname=active_compte"><span trspan="PE4"></a>
+    </p> 
+
+
+    
+
+          </div> <!-- card-body -->
+        </div> <!-- card -->
+      </div> <!-- col -->
+    </div> <!-- row-->
+
+</main>
+
+  </div> <!--wrap-->
+
+  <div id="footer">
+    <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 col-10">
+      <!-- Custom HTML footer -->
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" href="https://www.unilim.fr"  target="_blank">UniversitÃ© de Limoges</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.unilim.fr/dsi"  target="_blank">Direction du SystÃ¨me d'Information</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://support.unilim.fr" target="_blank"><span trspan="anotherInformation"></a>
+  </li>
+</ul>
+
+      
+<script type="text/javascript" src="/index.psgi/psgi.js"></script>
+<!-- <script type="text/javascript" src="/static/unilim/assets/js/core/jquery.min.js"></script> -->
+<script type="text/javascript" src="/static/unilim/assets/js/core/popper.min.js"></script>
+<script type="text/javascript" src="/static/unilim/assets/js/core/bootstrap-material-design.min.js"></script>
+<script type="text/javascript" src="/static/unilim/assets/js/plugins/bootstrap-notify.js"></script>
+<script type="text/javascript" src="/static/unilim/assets/js/material-dashboard.js"></script>
+<script type="text/javascript" src="/static/unilim/icons/liga.js"></script>
+<script type="text/javascript" src="/static/unilim/js/custom.js"></script>
+        
+    
+
+
+    </div>
+    
+    <div class="col-md-2 col-2 text-right">
+      <span id="languages"></span>
+    </div>
+    
+    </div>
+  </div>
+
+<!-- Constants -->
+<script type="text/JavaScript" src="/index.psgi/psgi.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,82 @@
+    [NEW] tcp      6 120 SYN_SENT src=10.10.10.13 dst=34.107.221.82 sport=37856 dport=80 [UNREPLIED] src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37856
+ [UPDATE] tcp      6 60 SYN_RECV src=10.10.10.13 dst=34.107.221.82 sport=37856 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37856
+ [UPDATE] tcp      6 432000 ESTABLISHED src=10.10.10.13 dst=34.107.221.82 sport=37856 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37856 [ASSURED]
+ [UPDATE] tcp      6 120 FIN_WAIT src=10.10.10.13 dst=34.107.221.82 sport=37856 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37856 [ASSURED]
+ [UPDATE] tcp      6 30 LAST_ACK src=10.10.10.13 dst=34.107.221.82 sport=37856 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37856 [ASSURED]
+ [UPDATE] tcp      6 120 TIME_WAIT src=10.10.10.13 dst=34.107.221.82 sport=37856 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37856 [ASSURED]
+[DESTROY] tcp      6 src=10.10.10.13 dst=34.107.221.82 sport=37738 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37738 [ASSURED]
+[DESTROY] tcp      6 src=10.10.10.13 dst=34.107.221.82 sport=37734 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37734 [ASSURED]
+    [NEW] tcp      6 120 SYN_SENT src=10.10.10.13 dst=34.107.221.82 sport=37858 dport=80 [UNREPLIED] src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37858
+ [UPDATE] tcp      6 60 SYN_RECV src=10.10.10.13 dst=34.107.221.82 sport=37858 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37858
+ [UPDATE] tcp      6 432000 ESTABLISHED src=10.10.10.13 dst=34.107.221.82 sport=37858 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37858 [ASSURED]
+ [UPDATE] tcp      6 120 FIN_WAIT src=10.10.10.13 dst=34.107.221.82 sport=37858 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37858 [ASSURED]
+ [UPDATE] tcp      6 30 LAST_ACK src=10.10.10.13 dst=34.107.221.82 sport=37858 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37858 [ASSURED]
+ [UPDATE] tcp      6 120 TIME_WAIT src=10.10.10.13 dst=34.107.221.82 sport=37858 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37858 [ASSURED]
+[DESTROY] tcp      6 src=10.10.10.13 dst=34.107.221.82 sport=37732 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37732 [ASSURED]
+    [NEW] tcp      6 120 SYN_SENT src=10.10.10.13 dst=34.107.221.82 sport=37860 dport=80 [UNREPLIED] src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37860
+ [UPDATE] tcp      6 60 SYN_RECV src=10.10.10.13 dst=34.107.221.82 sport=37860 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37860
+ [UPDATE] tcp      6 432000 ESTABLISHED src=10.10.10.13 dst=34.107.221.82 sport=37860 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37860 [ASSURED]
+ [UPDATE] tcp      6 120 FIN_WAIT src=10.10.10.13 dst=34.107.221.82 sport=37860 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37860 [ASSURED]
+ [UPDATE] tcp      6 30 LAST_ACK src=10.10.10.13 dst=34.107.221.82 sport=37860 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37860 [ASSURED]
+ [UPDATE] tcp      6 120 TIME_WAIT src=10.10.10.13 dst=34.107.221.82 sport=37860 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37860 [ASSURED]
+    [NEW] tcp      6 120 SYN_SENT src=10.10.10.13 dst=198.245.60.92 sport=56326 dport=80 [UNREPLIED] src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=56326
+ [UPDATE] tcp      6 60 SYN_RECV src=10.10.10.13 dst=198.245.60.92 sport=56326 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=56326
+ [UPDATE] tcp      6 432000 ESTABLISHED src=10.10.10.13 dst=198.245.60.92 sport=56326 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=56326 [ASSURED]
+    [NEW] tcp      6 120 SYN_SENT src=10.10.10.13 dst=216.58.209.234 sport=37356 dport=443 [UNREPLIED] src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37356
+ [UPDATE] tcp      6 60 SYN_RECV src=10.10.10.13 dst=216.58.209.234 sport=37356 dport=443 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37356
+ [UPDATE] tcp      6 432000 ESTABLISHED src=10.10.10.13 dst=216.58.209.234 sport=37356 dport=443 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37356 [ASSURED]
+    [NEW] tcp      6 120 SYN_SENT src=10.10.10.13 dst=198.245.60.92 sport=56330 dport=80 [UNREPLIED] src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=56330
+ [UPDATE] tcp      6 60 SYN_RECV src=10.10.10.13 dst=198.245.60.92 sport=56330 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=56330
+ [UPDATE] tcp      6 432000 ESTABLISHED src=10.10.10.13 dst=198.245.60.92 sport=56330 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=56330 [ASSURED]
+    [NEW] tcp      6 120 SYN_SENT src=10.10.10.13 dst=216.58.209.234 sport=37360 dport=443 [UNREPLIED] src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37360
+ [UPDATE] tcp      6 60 SYN_RECV src=10.10.10.13 dst=216.58.209.234 sport=37360 dport=443 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37360
+ [UPDATE] tcp      6 432000 ESTABLISHED src=10.10.10.13 dst=216.58.209.234 sport=37360 dport=443 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37360 [ASSURED]
+    [NEW] tcp      6 120 SYN_SENT src=10.0.2.15 dst=164.81.1.72 sport=47430 dport=443 [UNREPLIED] src=164.81.1.72 dst=10.0.2.15 sport=443 dport=47430
+ [UPDATE] tcp      6 60 SYN_RECV src=10.0.2.15 dst=164.81.1.72 sport=47430 dport=443 src=164.81.1.72 dst=10.0.2.15 sport=443 dport=47430
+ [UPDATE] tcp      6 432000 ESTABLISHED src=10.0.2.15 dst=164.81.1.72 sport=47430 dport=443 src=164.81.1.72 dst=10.0.2.15 sport=443 dport=47430 [ASSURED]
+ [UPDATE] tcp      6 120 FIN_WAIT src=10.0.2.15 dst=164.81.1.72 sport=47430 dport=443 src=164.81.1.72 dst=10.0.2.15 sport=443 dport=47430 [ASSURED]
+ [UPDATE] tcp      6 60 CLOSE_WAIT src=10.0.2.15 dst=164.81.1.72 sport=47430 dport=443 src=164.81.1.72 dst=10.0.2.15 sport=443 dport=47430 [ASSURED]
+ [UPDATE] tcp      6 30 LAST_ACK src=10.0.2.15 dst=164.81.1.72 sport=47430 dport=443 src=164.81.1.72 dst=10.0.2.15 sport=443 dport=47430 [ASSURED]
+ [UPDATE] tcp      6 120 TIME_WAIT src=10.0.2.15 dst=164.81.1.72 sport=47430 dport=443 src=164.81.1.72 dst=10.0.2.15 sport=443 dport=47430 [ASSURED]
+ [UPDATE] tcp      6 120 FIN_WAIT src=10.10.10.13 dst=198.245.60.92 sport=56326 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=56326 [ASSURED]
+ [UPDATE] tcp      6 30 LAST_ACK src=10.10.10.13 dst=198.245.60.92 sport=56326 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=56326 [ASSURED]
+ [UPDATE] tcp      6 120 TIME_WAIT src=10.10.10.13 dst=198.245.60.92 sport=56326 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=56326 [ASSURED]
+ [UPDATE] tcp      6 10 CLOSE src=10.10.10.13 dst=216.58.209.234 sport=37356 dport=443 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37356 [ASSURED]
+ [UPDATE] tcp      6 120 FIN_WAIT src=10.10.10.13 dst=198.245.60.92 sport=56330 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=56330 [ASSURED]
+ [UPDATE] tcp      6 30 LAST_ACK src=10.10.10.13 dst=198.245.60.92 sport=56330 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=56330 [ASSURED]
+ [UPDATE] tcp      6 120 TIME_WAIT src=10.10.10.13 dst=198.245.60.92 sport=56330 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=56330 [ASSURED]
+ [UPDATE] tcp      6 10 CLOSE src=10.10.10.13 dst=216.58.209.234 sport=37360 dport=443 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37360 [ASSURED]
+    [NEW] tcp      6 120 SYN_SENT src=10.10.10.13 dst=216.58.209.234 sport=37364 dport=443 [UNREPLIED] src=216.58.209.234 dst=10.0.2.15 sport=443 dport=37364
+ [UPDATE] tcp      6 60 SYN_RECV src=10.10.10.13 dst=216.58.209.234 sport=37364 dport=443 src=216.58.209.234 dst=10.0.2.15 sport=443 dport=37364
+ [UPDATE] tcp      6 432000 ESTABLISHED src=10.10.10.13 dst=216.58.209.234 sport=37364 dport=443 src=216.58.209.234 dst=10.0.2.15 sport=443 dport=37364 [ASSURED]
+    [NEW] tcp      6 120 SYN_SENT src=10.10.10.13 dst=216.58.209.227 sport=49776 dport=80 [UNREPLIED] src=216.58.209.227 dst=10.0.2.15 sport=80 dport=49776
+ [UPDATE] tcp      6 60 SYN_RECV src=10.10.10.13 dst=216.58.209.227 sport=49776 dport=80 src=216.58.209.227 dst=10.0.2.15 sport=80 dport=49776
+ [UPDATE] tcp      6 432000 ESTABLISHED src=10.10.10.13 dst=216.58.209.227 sport=49776 dport=80 src=216.58.209.227 dst=10.0.2.15 sport=80 dport=49776 [ASSURED]
+[DESTROY] tcp      6 src=10.10.10.13 dst=34.107.221.82 sport=37742 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37742 [ASSURED]
+    [NEW] tcp      6 120 SYN_SENT src=10.10.10.13 dst=34.107.221.82 sport=37876 dport=80 [UNREPLIED] src=34.107.221.82 dst=10.0.2.15 sport=80 dport=37876
+ [UPDATE] tcp      6 60 SYN_RECV src=10.10.10.13 dst=34.107.221.82 sport=37876 dport=80 src=34.107.221.82 dst=10.0.2.15 sport=80 dport=37876
+ [UPDATE] tcp      6 432000 ESTABLISHED src=10.10.10.13 dst=34.107.221.82 sport=37876 dport=80 src=34.107.221.82 dst=10.0.2.15 sport=80 dport=37876 [ASSURED]
+    [NEW] tcp      6 120 SYN_SENT src=10.10.10.13 dst=198.245.60.92 sport=56342 dport=80 [UNREPLIED] src=198.245.60.92 dst=10.0.2.15 sport=80 dport=56342
+    [NEW] tcp      6 120 SYN_SENT src=10.10.10.13 dst=198.245.60.92 sport=56344 dport=80 [UNREPLIED] src=198.245.60.92 dst=10.0.2.15 sport=80 dport=56344
+    [NEW] tcp      6 120 SYN_SENT src=10.10.10.13 dst=198.245.60.92 sport=56346 dport=80 [UNREPLIED] src=198.245.60.92 dst=10.0.2.15 sport=80 dport=56346
+ [UPDATE] tcp      6 60 SYN_RECV src=10.10.10.13 dst=198.245.60.92 sport=56344 dport=80 src=198.245.60.92 dst=10.0.2.15 sport=80 dport=56344
+ [UPDATE] tcp      6 432000 ESTABLISHED src=10.10.10.13 dst=198.245.60.92 sport=56344 dport=80 src=198.245.60.92 dst=10.0.2.15 sport=80 dport=56344 [ASSURED]
+[DESTROY] tcp      6 src=10.10.10.13 dst=34.107.221.82 sport=37744 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37744 [ASSURED]
+ [UPDATE] tcp      6 60 SYN_RECV src=10.10.10.13 dst=198.245.60.92 sport=56346 dport=80 src=198.245.60.92 dst=10.0.2.15 sport=80 dport=56346
+ [UPDATE] tcp      6 432000 ESTABLISHED src=10.10.10.13 dst=198.245.60.92 sport=56346 dport=80 src=198.245.60.92 dst=10.0.2.15 sport=80 dport=56346 [ASSURED]
+ [UPDATE] tcp      6 60 SYN_RECV src=10.10.10.13 dst=198.245.60.92 sport=56342 dport=80 src=198.245.60.92 dst=10.0.2.15 sport=80 dport=56342
+ [UPDATE] tcp      6 432000 ESTABLISHED src=10.10.10.13 dst=198.245.60.92 sport=56342 dport=80 src=198.245.60.92 dst=10.0.2.15 sport=80 dport=56342 [ASSURED]
+    [NEW] tcp      6 120 SYN_SENT src=10.10.10.13 dst=198.245.60.92 sport=45778 dport=443 [UNREPLIED] src=198.245.60.92 dst=10.0.2.15 sport=443 dport=45778
+[DESTROY] tcp      6 src=10.10.10.13 dst=34.107.221.82 sport=37740 dport=80 src=10.10.10.1 dst=10.10.10.13 sport=8080 dport=37740 [ASSURED]
+ [UPDATE] tcp      6 60 SYN_RECV src=10.10.10.13 dst=198.245.60.92 sport=45778 dport=443 src=198.245.60.92 dst=10.0.2.15 sport=443 dport=45778
+ [UPDATE] tcp      6 432000 ESTABLISHED src=10.10.10.13 dst=198.245.60.92 sport=45778 dport=443 src=198.245.60.92 dst=10.0.2.15 sport=443 dport=45778 [ASSURED]
+    [NEW] tcp      6 120 SYN_SENT src=10.10.10.13 dst=173.223.11.153 sport=47094 dport=80 [UNREPLIED] src=173.223.11.153 dst=10.0.2.15 sport=80 dport=47094
+ [UPDATE] tcp      6 60 SYN_RECV src=10.10.10.13 dst=173.223.11.153 sport=47094 dport=80 src=173.223.11.153 dst=10.0.2.15 sport=80 dport=47094
+ [UPDATE] tcp      6 432000 ESTABLISHED src=10.10.10.13 dst=173.223.11.153 sport=47094 dport=80 src=173.223.11.153 dst=10.0.2.15 sport=80 dport=47094 [ASSURED]
+    [NEW] tcp      6 120 SYN_SENT src=10.10.10.13 dst=209.197.3.15 sport=60312 dport=443 [UNREPLIED] src=209.197.3.15 dst=10.0.2.15 sport=443 dport=60312
+    [NEW] tcp      6 120 SYN_SENT src=10.10.10.13 dst=209.197.3.15 sport=60314 dport=443 [UNREPLIED] src=209.197.3.15 dst=10.0.2.15 sport=443 dport=60314
+ [UPDATE] tcp      6 60 SYN_RECV src=10.10.10.13 dst=209.197.3.15 sport=60312 dport=443 src=209.197.3.15 dst=10.0.2.15 sport=443 dport=60312
+ [UPDATE] tcp      6 432000 ESTABLISHED src=10.10.10.13 dst=209.197.3.15 sport=60312 dport=443 src=209.197.3.15 dst=10.0.2.15 sport=443 dport=60312 [ASSURED]
+ [UPDATE] tcp      6 60 SYN_RECV src=10.10.10.13 dst=209.197.3.15 sport=60314 dport=443 src=209.197.3.15 dst=10.0.2.15 sport=443 dport=60314
+ [UPDATE] tcp      6 432000 ESTABLISHED src=10.10.10.13 dst=209.197.3.15 sport=60314 dport=443 src=209.197.3.15 dst=10.0.2.15 sport=443 dport=60314 [ASSURED]
+    [NEW] tcp      6 120 SYN_SENT src=10.10.10.13 dst
